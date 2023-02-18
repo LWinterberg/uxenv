@@ -404,5 +404,4 @@ Help
    LinkAccount
    Updates
    About
-HiddenFileMenu
-   ExportFLAC
+ 

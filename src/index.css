@@ -32,11 +32,14 @@ body {
 }
 
 .title {
-  color:black;
+  color:#333;
 }
 
 .chevron {
-  color: black;
+  color: #333;
+}
+hr {
+  opacity: 30%;
 }
 
 h1 {

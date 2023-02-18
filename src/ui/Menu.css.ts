@@ -6,7 +6,7 @@ export const menuitem = style({
   backgroundColor: bgColor,
   borderRadius: "2px",
   fontSize: "14px",
-  padding: "0.25rem 0.5rem",
+  padding: "0.1rem 0.5rem",
   position: "relative",
 
   selectors: {
@@ -14,6 +14,9 @@ export const menuitem = style({
     "&:hover, &.is-active": {
       backgroundColor: "#aaa",
     },
+  },
+  vars: {
+    [bgColor]: "#F5F5F7",
   },
 });
 
@@ -35,7 +38,7 @@ export const menu__strip = style({
 
 export const menu__list = style({
   backgroundColor: bgColor,
-  border: "1px solid #fff2",
+  border: "1px solid #3332",
   borderRadius: "2px",
   isolation: "isolate",
   left: "100%",
@@ -51,7 +54,7 @@ export const menu__list = style({
       left: "100%",
       top: 0,
     },
-
+    
     [`${menuitem}:not(.is-active) &`]: {
       opacity: 0,
       display: "none",
