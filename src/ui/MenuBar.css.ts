@@ -6,6 +6,8 @@ export const menubar = style({
   display: "grid",
   gridAutoFlow: "column",
   userSelect: "none",
+  justifyContent: "start",
+
   vars: {
     [bgColor]: "#333",
   },
