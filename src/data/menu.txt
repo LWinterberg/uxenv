@@ -8,6 +8,7 @@ File
    Save
    SaveAs
    SaveCopy
+   ====================
    Export Audio
    Export Other
       ExportLabels

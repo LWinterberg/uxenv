@@ -12,7 +12,7 @@ export const menuitem = style({
   selectors: {
     "&:is-active": {},
     "&:hover, &.is-active": {
-      backgroundColor: "#444",
+      backgroundColor: "#aaa",
     },
   },
 });
@@ -24,7 +24,7 @@ export const menu = style({
   userSelect: "none",
 
   vars: {
-    [bgColor]: "#333",
+    [bgColor]: "#F5F5F7",
   },
 });
 

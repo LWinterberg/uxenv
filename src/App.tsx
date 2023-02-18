@@ -26,6 +26,7 @@ function App() {
         border-color: transparent;
       }
       .hilight { border-color: #ff06; }
+
       `}</style>
 
       <MenuBar items={menuData} />

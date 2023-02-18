@@ -9,7 +9,7 @@ export const menubar = style({
   justifyContent: "start",
 
   vars: {
-    [bgColor]: "#333",
+    [bgColor]: "#F5F5F7",
   },
 });
 
@@ -23,7 +23,7 @@ export const menubaritem = style({
   selectors: {
     "&:is-active": {},
     "&:hover, &.is-active": {
-      backgroundColor: "#444",
+      backgroundColor: "#aaa",
     },
   },
 });
@@ -32,4 +32,5 @@ export const menubarmenu = style({
   position: "absolute",
   top: "2rem",
   left: 0,
+  backgroundColor: bgColor,
 });
