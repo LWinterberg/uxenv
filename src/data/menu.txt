@@ -4,22 +4,13 @@ File
    Recent
       PopulateRecentFilesStep
    Import
-      ImportAudio
-      ImportLabels
-      ImportMIDI
-      ImportRaw
    ====================
    Save
    SaveAs
    SaveCopy
-   Export
-      ExportMp3
-      ExportWav
-      ExportOgg
-      Export
-      ExportSel
+   Export Audio
+   Export Other
       ExportLabels
-      ExportMultiple
       ExportMIDI
    ====================
    Close
@@ -49,7 +40,6 @@ Edit
    ====================
    AddLabel
    PasteNewLabel
-   EditLabels
    Labeled
       CutLabels
       SplitCutLabels
@@ -63,27 +53,29 @@ Edit
       SilenceLabels
       DisjoinLabels
    ====================
+   EditLabels
    EditMetaData
+   ====================
    Preferences
 Select
    SelectAll
    SelectNone
-   SelTrackStartToEnd //rename: select entire track
-   SelTrackStartToCursor //rename: select before cursor
-   SelCursorToTrackEnd //rename: select after cursor
+   SelTrackStartToEnd 
+   SelTrackStartToCursor 
+   SelCursorToTrackEnd 
    ====================
    SelPrevClip
    SelNextClip
    MoveToPrevLabel
    MoveToNextLabel
    ====================
-   ZeroCross
    Looping
       TogglePlayRegion
       ClearPlayRegion
       SetPlayRegionToSelection
       SetPlayRegionIn
       SetPlayRegionOut
+   ZeroCross
 View
    Zoom
       ZoomIn
@@ -197,6 +189,7 @@ Tools
    Labels
    Data Export
    Data Import
+   Raw Data Import
    ====================
    SimulateRecordingErrors
    DetectUpstreamDropouts
@@ -210,6 +203,7 @@ Extra
       Pause
       Play
       Stop
+      ====================
       PlayOneSec
       PlayToSelection
       PlayBeforeSelectionStart
@@ -266,6 +260,7 @@ Extra
       SnapToOff
       SnapToNearest
       SnapToPrior
+      ====================
       SelStart
       SelEnd
       SelExtLeft
@@ -329,6 +324,7 @@ Extra
       PanLeft
       PanRight
       PanCenter
+      ====================
       TrackGain
       TrackGainInc
       TrackGainDec
@@ -339,6 +335,7 @@ Extra
       UnmuteAllTracks
       MuteTracks
       UnmuteTracks
+      ====================
       TrackClose
       TrackMoveUp
       TrackMoveDown
@@ -374,10 +371,9 @@ Extra
       Screenshot
       PageSetup
       Print
-   FullScreenOnOff
-   Karaoke
    Settings
       ShowTrackNameInWaveform
+      FullScreenOnOff
       TypeToCreateLabel
       AdvancedVZoom
       PinnedHead
@@ -386,9 +382,11 @@ Extra
       RescanDevices // move to audio setup menu
       MoveSelectionWithTracks
       ShowExtraMenus
+   Karaoke
    Benchmark
 Help
    QuickHelp
+   Tutorials
    Manual
    ====================
    Diagnostics
