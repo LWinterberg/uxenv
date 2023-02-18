@@ -24,7 +24,7 @@ const DropDownMenuItem = ({ title, items, ...props }: WrapperProps) => {
 type DropdownProps = PropsWithChildren<{
   key?: any;
   className?: string;
-  items: DropdownProps[];
+  items?: DropdownProps[];
   showItems?: boolean;
   title?: string;
 }> &
@@ -35,7 +35,7 @@ const DropdownMenu = ({ items, ...props }: DropdownProps) => {
   const [activeId, setActiveId, isOpen, setIsOpen] = useReveal(menuRef);
   return (
     <div className={clsx(menu__list, menubarmenu)} ref={menuRef}>
-      {items.map((item, index) => {
+      {items?.map((item, index) => {
         return (
           <DropDownMenuItem
             key={`${index}-${item.title}`}
@@ -50,16 +50,16 @@ const DropdownMenu = ({ items, ...props }: DropdownProps) => {
 };
 
 type Props = PropsWithChildren<
-  { items: DropdownProps[] } & HTMLAttributes<HTMLDivElement>
+  { items?: DropdownProps[] } & HTMLAttributes<HTMLDivElement>
 >;
 
-const MenuBar = ({ items: menuItems, ...props }: Props) => {
+const MenuBar = ({ items, ...props }: Props) => {
   const menuRef = useRef<HTMLDivElement>(null);
   const [activeId, setActiveId, isOpen, setIsOpen] = useReveal(menuRef);
 
   return (
     <div className={menubar} ref={menuRef} {...props} tabIndex={0}>
-      {menuItems.map(({ ...barItemProps }, barItemIndex) => {
+      {items?.map(({ ...barItemProps }, barItemIndex) => {
         return (
           <div
             key={`${barItemIndex}`}

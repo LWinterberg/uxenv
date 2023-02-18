@@ -2,6 +2,7 @@
   "name": "uxenv",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://lwinterberg.github.io/uxenv/",
   "type": "module",
   "scripts": {
     "dev": "vite",
