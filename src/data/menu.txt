@@ -1,13 +1,14 @@
 File
    New
-   Import
    Open
    Recent
       PopulateRecentFilesStep
    ====================
+   Import
+   ====================
    Save
    SaveAs
-   SaveCopy
+   Save Backup
    ====================
    Export Audio
    Export Other
@@ -41,9 +42,9 @@ Edit
       Join
       Disjoin
    ====================
-   AddLabel
-   PasteNewLabel
-   Labeled
+   Add Label
+   Paste New Label
+   Audio actions across labels
       CutLabels
       SplitCutLabels
       CopyLabels
@@ -61,16 +62,15 @@ Edit
    ====================
    Preferences
 Select
-   SelectAll
-   SelectNone
-   SelTrackStartToEnd 
-   SelTrackStartToCursor 
-   SelCursorToTrackEnd 
+   Select All
+   Select None
    ====================
-   SelPrevClip
-   SelNextClip
-   MoveToPrevLabel
-   MoveToNextLabel
+   Select entire track 
+   Select from start to cursor 
+   Select from cursor end 
+   ====================
+   Select previous item
+   Select next item
    ====================
    Looping
       TogglePlayRegion
@@ -78,7 +78,7 @@ Select
       SetPlayRegionToSelection
       SetPlayRegionIn
       SetPlayRegionOut
-   ZeroCross
+   Select near Zero Crossings
 View
    Zoom
       ZoomIn
@@ -95,8 +95,8 @@ View
       SkipSelStart
       SkipSelEnd
    ====================
-   UndoHistory
-   MixerBoard
+   Undo History
+   Mixer
    ====================
    Toolbars
       ResetToolbars
@@ -118,19 +118,19 @@ View
    ====================
    ShowClipping
 Record
-   Record1stChoice
-   Record2ndChoice
-   TimerRecord
-   PunchAndRoll
+   Record on current track
+   Record on new track
+   Timer record
+   Punch and roll record
    ====================
-   SoundActivation
-   SoundActivationLevel
+   Sound activated recording
+   Sound activation level...
 Tracks
-   NewMonoTrack
-   NewStereoTrack
-   NewLabelTrack
-   NewTimeTrack
-   RemoveTracks
+   New Mono Track
+   New Stereo Track
+   New Label Track
+   New Time Track
+   Remove Tracks
    ====================
    Mix
       Stereo to Mono
@@ -146,17 +146,13 @@ Tracks
       SortByTime
       SortByName
    ====================
-   SyncLock
+   Sync Lock
 Generate
    ManageGenerators
    ====================
    RepeatLastGenerator
    ====================
-   Chirp
-   DTMF Tones
-   Noise
-   Pluck
-   Omitted
+   (omitted)
 Effect
    ManageEffects
    ====================
@@ -164,7 +160,25 @@ Effect
    ====================
    RepeatLastEffect
    ====================
-   Omitted
+   Volume and compression
+      (omitted)
+   Fading
+      (omitted)
+   Pitch and tempo
+      (omitted)
+   EQ and filters
+      (omitted)
+   Noise removal and repair
+      (omitted)
+   Delay and reverb
+      (omitted)
+   Distortion and modulation
+      (omitted)
+   Special
+      (omitted)
+   Spectral tools
+      (omitted)
+   (PluginsOmitted)
 Analyze
    ManageAnalyzers
    ====================
@@ -189,14 +203,15 @@ Tools
    ====================
    Nyquist Plugin Installer
    Nyquist Prompt
-   Labels
-   Data Export
-   Data Import
+   ====================
+   Sample Data Export
+   Sample Data Import
    Raw Data Import
    ====================
    SimulateRecordingErrors
    DetectUpstreamDropouts
    ====================
+   Regular Interval Labels
    WriteJournal
 Extra
    Play
