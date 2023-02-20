@@ -1,9 +1,9 @@
 File
    New
+   Import
    Open
    Recent
       PopulateRecentFilesStep
-   Import
    ====================
    Save
    SaveAs
@@ -21,12 +21,14 @@ Edit
    Redo
    ====================
    Cut
-   SplitCut
    Copy
    Paste
-   Duplicate
    Delete
-   SplitDelete
+   ====================
+   Cut and close gap
+   Duplicate
+   Insert
+   Delete and close gap
    ====================
    Clip
       RenameClip
