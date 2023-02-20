@@ -33,6 +33,7 @@ body {
 
 .title {
   color:#333;
+  white-space: pre;
 }
 
 .chevron {
