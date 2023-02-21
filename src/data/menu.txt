@@ -124,7 +124,7 @@ Record
    Punch and roll record
    ====================
    Sound activated recording
-   Sound activation level...
+   Set sound activation level
 Tracks
    New Mono Track
    New Stereo Track
