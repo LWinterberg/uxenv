@@ -38,9 +38,12 @@ body {
 
 .chevron {
   color: #333;
+  margin-left: 3px;
 }
+
 hr {
   opacity: 30%;
+  margin: 0.3em;
 }
 
 h1 {

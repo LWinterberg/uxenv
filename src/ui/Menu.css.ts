@@ -42,7 +42,7 @@ export const menu__list = style({
   borderRadius: "2px",
   isolation: "isolate",
   left: "100%",
-  lineHeight: "2em",
+  lineHeight: "1.5em",
   minWidth: "10em",
   padding: "2px",
   position: "absolute",

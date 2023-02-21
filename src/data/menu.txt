@@ -6,8 +6,8 @@ File
    ====================
    Import
    ====================
-   Save
-   SaveAs
+   Save Project
+   Save As
    Save Backup
    ====================
    Export Audio
@@ -15,7 +15,7 @@ File
       ExportLabels
       ExportMIDI
    ====================
-   Close
+   Close Project
    Exit
 Edit
    Undo
@@ -57,8 +57,8 @@ Edit
       SilenceLabels
       DisjoinLabels
    ====================
-   EditLabels
-   EditMetaData
+   Manage Labels
+   Manage MetaData
    ====================
    Preferences
 Select
@@ -178,6 +178,7 @@ Effect
       (omitted)
    Spectral tools
       (omitted)
+   ====================
    (PluginsOmitted)
 Analyze
    ManageAnalyzers
@@ -199,7 +200,7 @@ Tools
       Macro_FadeEnds
       Macro_MP3Conversion
    ====================
-   ConfigReset
+   Regular Interval Labels
    ====================
    Nyquist Plugin Installer
    Nyquist Prompt
@@ -208,11 +209,7 @@ Tools
    Sample Data Import
    Raw Data Import
    ====================
-   SimulateRecordingErrors
-   DetectUpstreamDropouts
-   ====================
-   Regular Interval Labels
-   WriteJournal
+   ConfigReset
 Extra
    Play
       DefaultPlayStop
