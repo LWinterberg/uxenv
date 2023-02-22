@@ -6,16 +6,16 @@ File
    ====================
    Import
    ====================
-   Save Project
-   Save As
-   Save Backup
+   Save project
+   Save as
+   Save backup
    ====================
-   Export Audio
-   Export Other
-      ExportLabels
-      ExportMIDI
+   Export audio
+   Export other
+      Export labels
+      Export MIDI
    ====================
-   Close Project
+   Close project
    Exit
 Edit
    Undo
@@ -42,8 +42,8 @@ Edit
       Join
       Disjoin
    ====================
-   Add Label
-   Paste New Label
+   Add label
+   Paste new label
    Audio actions across labels
       CutLabels
       SplitCutLabels
@@ -57,13 +57,13 @@ Edit
       SilenceLabels
       DisjoinLabels
    ====================
-   Manage Labels
-   Manage MetaData
+   Manage labels
+   Manage metadata
    ====================
    Preferences
 Select
-   Select All
-   Select None
+   Select all
+   Select none
    ====================
    Select entire track 
    Select from start to cursor 
@@ -78,7 +78,7 @@ Select
       SetPlayRegionToSelection
       SetPlayRegionIn
       SetPlayRegionOut
-   Select near Zero Crossings
+   Select near zero crossings
 View
    Zoom
       ZoomIn
@@ -95,7 +95,7 @@ View
       SkipSelStart
       SkipSelEnd
    ====================
-   Undo History
+   Undo history
    Mixer
    ====================
    Toolbars
@@ -116,21 +116,21 @@ View
       ShowAudioSetupTB
       ShareAudioTB
    ====================
-   ShowClipping
+   Show clipping indicators
 Record
    Record on current track
    Record on new track
-   Timer record
+   Start record on a timer
    Punch and roll record
    ====================
    Sound activated recording
    Set sound activation level
 Tracks
-   New Mono Track
-   New Stereo Track
-   New Label Track
-   New Time Track
-   Remove Tracks
+   New mono track
+   New stereo track
+   New label track
+   New time track
+   Remove tracks
    ====================
    Mix
       Stereo to Mono
@@ -146,7 +146,7 @@ Tracks
       SortByTime
       SortByName
    ====================
-   Sync Lock
+   Sync lock
 Generate
    ManageGenerators
    ====================
@@ -193,23 +193,23 @@ Tools
    ====================
    RepeatLastTool
    ====================
-   ManageMacros
+   Manage macros
    Macros
       ApplyMacrosPalette
       ====================
       Macro_FadeEnds
       Macro_MP3Conversion
    ====================
-   Regular Interval Labels
+   Regular interval labels
    ====================
-   Nyquist Plugin Installer
-   Nyquist Prompt
+   Nyquist plugin installer
+   Nyquist prompt
    ====================
-   Sample Data Export
-   Sample Data Import
-   Raw Data Import
+   Sample data export
+   Sample data import
+   Raw data import
    ====================
-   ConfigReset
+   Reset configuration
 Extra
    Play
       DefaultPlayStop
