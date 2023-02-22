@@ -1,6 +1,14 @@
 import { createVar, globalStyle, style } from "@vanilla-extract/css";
 
-const iconColor = createVar();
+export const iconColor = createVar();
+
+export const icon = style({
+  display: "block",
+
+  vars: {
+    [iconColor]: "#222",
+  },
+});
 
 globalStyle(".path", {
   strokeWidth: 1.5,
@@ -16,12 +24,4 @@ globalStyle(".path-stroked", {
 globalStyle(".path-filled", {
   fill: iconColor,
   stroke: "none",
-});
-
-export const svgStyle = style({
-  display: "block",
-
-  vars: {
-    [iconColor]: "#222",
-  },
 });

@@ -1,19 +1,39 @@
-import { style } from "@vanilla-extract/css";
 import { HTMLProps } from "react";
-import { svgStyle } from "./Icon.css";
 import Icons from "./IconDefs";
 
+import { icon, iconColor } from "./Icon.css";
+
 type Props = {
-  icon: keyof typeof Icons;
+  name: keyof typeof Icons;
   size?: number;
+  color?: string;
 } & HTMLProps<SVGSVGElement>;
 
-const Icon = ({ icon, size = 12, ...props }: Props) => {
-  const Fn = Icons[icon];
+const cssvarRe = new RegExp(/var\((?<varname>--.*?)\)/);
+
+const getVarName = (cssvar: string) => {
+  const [, varname] = cssvarRe.exec(cssvar) || [];
+  return varname;
+};
+
+const Icon = ({
+  name: name,
+  size = 12,
+  color = "#999",
+  style,
+  ...props
+}: Props) => {
+  const varname = getVarName(iconColor);
+  console.log(varname, iconColor);
+
+  const extraStyles = { ...style, [`${getVarName(iconColor)}`]: color };
+
+  const Fn = Icons[name];
   return Fn({
-    className: svgStyle,
+    className: icon,
     width: `${size}px`,
     height: `${size}px`,
+    style: extraStyles,
     ...props,
   });
 };
