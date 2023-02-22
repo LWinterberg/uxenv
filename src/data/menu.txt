@@ -7,7 +7,7 @@ File
    Import
    ====================
    Save project
-   Save as
+   Save as...
    Save backup
    ====================
    Export audio
@@ -120,7 +120,7 @@ View
 Record
    Record on current track
    Record on new track
-   Start record on a timer
+   Set up timed recording
    Punch and roll record
    ====================
    Sound activated recording
@@ -148,13 +148,13 @@ Tracks
    ====================
    Sync lock
 Generate
-   ManageGenerators
+   Plugin manager
    ====================
    RepeatLastGenerator
    ====================
    (omitted)
 Effect
-   ManageEffects
+   Plugin manager
    ====================
    AddRealtimeEffects
    ====================
@@ -181,7 +181,7 @@ Effect
    ====================
    (PluginsOmitted)
 Analyze
-   ManageAnalyzers
+   Plugin manager
    ====================
    RepeatLastAnalyzer
    ====================
@@ -189,7 +189,7 @@ Analyze
    PlotSpectrum
    Omitted
 Tools
-   ManageTools
+   Plugin manager
    ====================
    RepeatLastTool
    ====================
@@ -400,7 +400,6 @@ Extra
    Karaoke
    Benchmark
 Help
-   QuickHelp
    Tutorials
    Manual
    ====================
@@ -415,7 +414,7 @@ Help
       MenuTree
       FrameStatistics
    ====================
-   LinkAccount
+   Link account
    Updates
    About
  
