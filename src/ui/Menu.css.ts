@@ -31,6 +31,7 @@ export const menu = style({
 });
 
 export const menu__strip = style({
+  alignItems: "center",
   display: "flex",
   justifyContent: "space-between",
 });
@@ -47,7 +48,6 @@ export const menu__list = style({
   position: "absolute",
   top: 0,
   transition: "opacity 60ms ease-in-out",
-  // filter: "drop-shadow(0 0 3px 8px #0009)",
   boxShadow: `
   0 3px 36px 0 #0002, 
   0 3px 8px 0 #0002,

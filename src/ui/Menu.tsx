@@ -9,6 +9,7 @@ import {
   useState,
 } from "react";
 import useClickOutside from "../lib/useClickOutside";
+import Icon from "./Icon";
 import { menu, menuitem, menu__list, menu__strip } from "./Menu.css";
 
 type ItemProps = {
@@ -38,7 +39,11 @@ const MenuItem = ({
     >
       <div className={menu__strip}>
         <div className="title">{title}</div>
-        {hasChildren && <span className="chevron">&gt;</span>}
+        {hasChildren && (
+          <span className="chevron">
+            <Icon icon="chevron-right" />
+          </span>
+        )}
       </div>
       {showItems && hasChildren && <div className={menu__list}>{children}</div>}
     </div>
