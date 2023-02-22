@@ -1,23 +1,25 @@
 import { style } from "@vanilla-extract/css";
 import { bgColor } from "./Menu.css";
 
-export const menubar = style({
+export const menubar__wrapper = style({
   background: bgColor,
-  display: "grid",
-  gridAutoFlow: "column",
-  userSelect: "none",
-  justifyContent: "start",
-
+  display: "flex",
+  gap: "1rem",
   vars: {
     [bgColor]: "#f5f5f7",
   },
 });
 
+export const menubar = style({
+  display: "grid",
+  gridAutoFlow: "column",
+  userSelect: "none",
+  justifyContent: "start",
+
+});
+
 export const menubaritem = style({
-  borderRadius: "2px",
-  fontSize: "14px",
-  padding: "0.25rem 0.5rem",
-  position: "relative",
+  padding: "2px 0.5rem",
 });
 
 export const menubarmenu = style({

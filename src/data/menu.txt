@@ -424,5 +424,3 @@ Help
    Tracks > Mixdown
       doesn't exist yet, new design (Audacity)
    more?
-🔎 Find command...
-   (this actually is a search box)

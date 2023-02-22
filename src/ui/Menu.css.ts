@@ -3,17 +3,23 @@ import { createVar, style } from "@vanilla-extract/css";
 export const bgColor = createVar();
 
 export const menuitem = style({
-  backgroundColor: bgColor,
   borderRadius: "2px",
   fontSize: "0.75rem",
   fontWeight: "500",
-  padding: "0.35rem 0.5rem",
+  padding: "0.35rem",
   position: "relative",
+  margin: "0 0 0 1px",
 
   selectors: {
-    "&:is-active": {},
     "&:hover, &.is-active": {
       backgroundColor: "#c4d5e4",
+    },
+    "&.has-searchterm": {
+      backgroundColor: "white",
+      boxShadow: `
+      0 0 4px 0 #39f1, 
+      0 0 1px 1px #39ff`,
+      overflow: "visible",
     },
   },
 });
@@ -24,10 +30,6 @@ export const menu = style({
   gridAutoFlow: "row",
   position: "relative",
   userSelect: "none",
-
-  vars: {
-    [bgColor]: "#F5F5F7",
-  },
 });
 
 export const menu__strip = style({

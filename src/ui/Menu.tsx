@@ -12,6 +12,7 @@ import useClickOutside from "../lib/useClickOutside";
 import Icon from "./Icon";
 import { menu, menuitem, menu__list, menu__strip } from "./Menu.css";
 
+
 type ItemProps = {
   title?: string;
   showItems?: boolean;
@@ -23,6 +24,7 @@ const MenuItem = ({
   showItems,
   onDeactivate,
   children,
+  className,
   ...props
 }: PropsWithChildren<ItemProps>) => {
   if (isDivider(title!)) {
@@ -33,7 +35,7 @@ const MenuItem = ({
 
   return (
     <div
-      className={clsx(menuitem, { "is-active": showItems })}
+      className={clsx(menuitem, { "is-active": showItems }, className)}
       {...props}
       ref={ref}
     >
@@ -41,7 +43,7 @@ const MenuItem = ({
         <div className="title">{title}</div>
         {hasChildren && (
           <span className="chevron">
-            <Icon icon="chevron-right" />
+            <Icon name="chevron-right" />
           </span>
         )}
       </div>

@@ -3,19 +3,42 @@ import { HTMLAttributes, PropsWithChildren, useRef } from "react";
 import useReveal from "../lib/useReveal";
 import Menu from "./Menu";
 import { menuitem, menu__list } from "./Menu.css";
-import { menubar, menubarmenu } from "./MenuBar.css";
+import {
+  menubar,
+  menubaritem,
+  menubarmenu,
+  menubar__wrapper,
+} from "./MenuBar.css";
 
 type WrapperProps = {
   title?: string;
   items?: DropdownProps[];
   showItems?: boolean;
+  searchTerm?: string;
 } & HTMLAttributes<HTMLDivElement>;
 
-const DropDownMenuItem = ({ title, items, ...props }: WrapperProps) => {
+const DropDownMenuItem = ({
+  items,
+  className,
+  searchTerm,
+  ...props
+}: WrapperProps) => {
   return (
-    <Menu.Item title={title} {...props}>
+    <Menu.Item
+      title={props.title}
+      {...props}
+      className={clsx(className, {
+        "has-searchterm": searchTerm && containsTitle(props, searchTerm),
+      })}
+    >
       {items?.map((item, index) => (
-        <DropDownMenuItem key={`${index}`} {...item} />
+        <DropDownMenuItem
+          key={`${index}`}
+          className={clsx(item.className, {
+            "has-searchterm": searchTerm && containsTitle(item, searchTerm),
+          })}
+          {...item}
+        />
       ))}
     </Menu.Item>
   );
@@ -27,10 +50,16 @@ type DropdownProps = PropsWithChildren<{
   items?: DropdownProps[];
   showItems?: boolean;
   title?: string;
+  searchTerm?: string;
 }> &
   HTMLAttributes<HTMLDivElement>;
 
-const DropdownMenu = ({ items, ...props }: DropdownProps) => {
+const DropdownMenu = ({
+  items,
+  searchTerm,
+  className,
+  ...props
+}: DropdownProps) => {
   const menuRef = useRef<HTMLDivElement>(null);
   const [activeId, setActiveId, isOpen, setIsOpen] = useReveal(menuRef);
   return (
@@ -41,7 +70,11 @@ const DropdownMenu = ({ items, ...props }: DropdownProps) => {
             key={`${index}-${item.title}`}
             {...item}
             showItems={activeId === index}
+            searchTerm={searchTerm}
             onClick={() => setActiveId(index)}
+            className={clsx(className, {
+              "has-searchterm": searchTerm && containsTitle(item, searchTerm),
+            })}
           />
         );
       })}
@@ -50,36 +83,62 @@ const DropdownMenu = ({ items, ...props }: DropdownProps) => {
 };
 
 type Props = PropsWithChildren<
-  { items?: DropdownProps[] } & HTMLAttributes<HTMLDivElement>
+  {
+    items?: DropdownProps[];
+    searchTerm?: string;
+  } & HTMLAttributes<HTMLDivElement>
 >;
 
-const MenuBar = ({ items, ...props }: Props) => {
+const containsTitle = (
+  tree: DropdownProps,
+  term: string
+): DropdownProps | undefined => {
+  if (
+    tree.title
+      ?.toLocaleLowerCase()
+      .trim()
+      .includes(term.toLocaleLowerCase().trim())
+  ) {
+    return tree;
+  }
+  if (tree.items)
+    return tree.items.find((branch) => containsTitle(branch, term));
+};
+
+const MenuBar = ({ children, items, searchTerm, ...props }: Props) => {
   const menuRef = useRef<HTMLDivElement>(null);
   const [activeId, setActiveId, isOpen, setIsOpen] = useReveal(menuRef);
 
   return (
-    <div className={menubar} ref={menuRef} {...props} tabIndex={0}>
-      {items?.map(({ ...barItemProps }, barItemIndex) => {
-        return (
-          <div
-            key={`${barItemIndex}`}
-            className={clsx(menuitem, {
-              "is-active": isOpen && activeId === barItemIndex,
-            })}
-            onClick={() => {
-              setIsOpen(true);
-              setActiveId(barItemIndex);
-            }}
-            onMouseEnter={() => setActiveId(barItemIndex)}
-          >
-            <div className="title">{barItemProps.title}</div>
-            {isOpen && activeId === barItemIndex && (
-              <DropdownMenu {...barItemProps} />
-            )}
-          </div>
-        );
-      })}
-    </div>
+    <>
+      <div className={menubar__wrapper}>
+        <div className={menubar} ref={menuRef} tabIndex={0} {...props}>
+          {items?.map((item, barItemIndex) => {
+            return (
+              <div
+                key={`${barItemIndex}`}
+                className={clsx(menubaritem, menuitem, {
+                  "is-active": isOpen && activeId === barItemIndex,
+                  "has-searchterm":
+                    searchTerm && containsTitle(item, searchTerm),
+                })}
+                onClick={() => {
+                  setIsOpen(true);
+                  setActiveId(barItemIndex);
+                }}
+                onMouseEnter={() => setActiveId(barItemIndex)}
+              >
+                <div className="title">{item.title}</div>
+                {isOpen && activeId === barItemIndex && (
+                  <DropdownMenu {...item} searchTerm={searchTerm} />
+                )}
+              </div>
+            );
+          })}
+        </div>
+        {children}
+      </div>
+    </>
   );
 };
 
