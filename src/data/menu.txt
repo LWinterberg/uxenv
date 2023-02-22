@@ -32,15 +32,17 @@ Edit
    Delete and close gap
    ====================
    Clip
-      RenameClip
-      Split
-      SplitNew
+      Rename clip
+      Trim clip
       ====================
-      Silence
-      Trim
+      Split clip
+      Split into new track
+      Split clips at silences
+      Merge selected clips
       ====================
-      Join
-      Disjoin
+      Group clips
+      Ungroup clips
+   Silence audio
    ====================
    Add label
    Paste new label
@@ -132,11 +134,7 @@ Tracks
    New time track
    Remove tracks
    ====================
-   Mix
-      Stereo to Mono
-      MixAndRender
-      MixAndRenderToNewTrack
-   Resample
+   Mixdown to...
    ====================
    Align
       Align
@@ -146,7 +144,7 @@ Tracks
       SortByTime
       SortByName
    ====================
-   Sync lock
+   Keep tracks synchronized
 Generate
    Plugin manager
    ====================
@@ -187,7 +185,7 @@ Analyze
    ====================
    ContrastAnalyser
    PlotSpectrum
-   Omitted
+   (Omitted)
 Tools
    Plugin manager
    ====================
@@ -417,4 +415,14 @@ Help
    Link account
    Updates
    About
- 
+.
+   Notes
+   ====================
+   Select > prev/next 
+      merge clips and label cmds; 
+      make dependent on track
+   Tracks > Mixdown
+      doesn't exist yet, new design (Audacity)
+   more?
+🔎 Find command...
+   (this actually is a search box)
