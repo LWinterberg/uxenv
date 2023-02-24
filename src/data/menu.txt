@@ -100,24 +100,6 @@ View
    Undo history
    Mixer
    ====================
-   Toolbars
-      ResetToolbars
-      ====================
-      ShowTransportTB
-      ShowToolsTB
-      ShowRecordMeterTB
-      ShowPlayMeterTB
-      ShowEditTB
-      ShowCutCopyPasteTB
-      ShowTranscriptionTB
-      ShowScrubbingTB
-      ShowDeviceTB
-      ShowSelectionTB
-      ShowTimeTB
-      ShowSpectralSelectionTB
-      ShowAudioSetupTB
-      ShareAudioTB
-   ====================
    Show clipping indicators
 Record
    Record on current track
@@ -197,8 +179,6 @@ Tools
       ====================
       Macro_FadeEnds
       Macro_MP3Conversion
-   ====================
-   Regular interval labels
    ====================
    Nyquist plugin installer
    Nyquist prompt
@@ -397,6 +377,7 @@ Extra
       ShowExtraMenus
    Karaoke
    Benchmark
+   Regular interval labels
 Help
    Tutorials
    Manual
