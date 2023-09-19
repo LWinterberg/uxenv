@@ -32,6 +32,7 @@ Edit
    Delete and close gap
    ====================
    Clip
+      Clip properties
       Rename clip
       Trim clip
       ====================
@@ -97,8 +98,11 @@ View
       SkipSelStart
       SkipSelEnd
    ====================
-   Undo history
-   Mixer
+   Show Undo history
+   Show Mixer panel
+   Show effects panel
+   ====================
+   Enable Fullscreen
    ====================
    Show clipping indicators
 Record
@@ -366,7 +370,6 @@ Extra
       Print
    Settings
       ShowTrackNameInWaveform
-      FullScreenOnOff
       TypeToCreateLabel
       AdvancedVZoom
       PinnedHead
