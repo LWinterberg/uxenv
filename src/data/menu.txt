@@ -1,5 +1,5 @@
 File
-   New
+   New project
    Open
    Recent
       PopulateRecentFilesStep
@@ -16,7 +16,7 @@ File
       Export MIDI
    ====================
    Close project
-   Exit
+   Quit Audacity
 Edit
    Undo
    Redo
