@@ -43,10 +43,12 @@ Edit
       ====================
       Group clips
       Ungroup clips
+      ====================
+      Bounce clips
    Silence audio
    ====================
    Add label
-   Paste new label
+   Paste as new label
    Audio actions across labels
       CutLabels
       SplitCutLabels
@@ -60,20 +62,14 @@ Edit
       SilenceLabels
       DisjoinLabels
    ====================
-   Manage labels
-   Manage metadata
-   ====================
    Preferences
 Select
    Select all
-   Select none
+   Clear selection
    ====================
    Select entire track 
    Select from start to cursor 
    Select from cursor end 
-   ====================
-   Select previous item
-   Select next item
    ====================
    Looping
       TogglePlayRegion
@@ -85,10 +81,10 @@ Select
 View
    Zoom
       ZoomIn
-      ZoomNormal
       ZoomOut
       ZoomSel
       ZoomToggle
+      Reset zoom
       ====================
       FitInWindow
       FitV
@@ -98,13 +94,17 @@ View
       SkipSelStart
       SkipSelEnd
    ====================
-   Show Undo history
-   Show Mixer panel
+   Show mixer panel
    Show effects panel
+   ====================
+   Show label editor
+   Show metadata editor
+   Show undo history
    ====================
    Enable Fullscreen
    ====================
    Show clipping indicators
+   Show vertical rulers
 Record
    Record on current track
    Record on new track
@@ -117,15 +117,21 @@ Tracks
    New mono track
    New stereo track
    New label track
-   New time track
+   ====================
+   Duplicate tracks
    Remove tracks
    ====================
    Mixdown to...
    ====================
    Align
-      Align
+      Align end to end
+      Align together
       ====================
-      Align
+      Align start to zero
+      Align start to playhead
+      Align start to selection end
+      Align end to playhead
+      Align end to selection end
    Sort
       SortByTime
       SortByName
@@ -139,10 +145,12 @@ Generate
    (omitted)
 Effect
    Plugin manager
-   ====================
    AddRealtimeEffects
    ====================
    RepeatLastEffect
+   ====================
+   Fav effect #1
+   Fav effect #2
    ====================
    Volume and compression
       (omitted)
@@ -408,3 +416,6 @@ Help
    Tracks > Mixdown
       doesn't exist yet, new design (Audacity)
    more?
+      ====================
+      Select previous item
+       Select next item
